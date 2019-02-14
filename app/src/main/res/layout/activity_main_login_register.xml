@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainLoginRegisterActivity" android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/tv_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin"
+        android:textSize="34sp"
+        android:textColor="@color/colorBlack"
+         />
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_below="@+id/tv_heading"
+        android:layout_margin="@dimen/margin" android:orientation="vertical"
+        android:weightSum="100" android:gravity="center" android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_login_pin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:hint="@string/enter_pin"
+            android:background="@drawable/et_border"
+            android:maxLength="4"
+            android:inputType="number"
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="12"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="@string/login" android:onClick="onLoginPress"
+            android:background="@drawable/btn_background"
+            />
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="@string/not_a_member_sign_up"
+            android:background="@android:color/transparent"
+            android:onClick="showRegisterScreen"
+            />
+            
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_register"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:layout_below="@+id/tv_heading"
+        android:layout_margin="@dimen/margin_top" android:orientation="vertical"
+        android:weightSum="100" android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:hint="@string/enter_name"
+            android:background="@drawable/et_border"
+            android:maxLength="15"
+            android:inputType="textPersonName"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="2"></View>
+
+        <EditText
+            android:id="@+id/et_register_address"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:hint="@string/enter_address"
+            android:background="@drawable/et_border"
+            android:maxLength="15"
+            android:inputType="textPostalAddress"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="2"></View>
+
+        <EditText
+            android:id="@+id/et_register_pin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:hint="@string/enter_pin"
+            android:background="@drawable/et_border"
+            android:maxLength="4"
+            android:inputType="number"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="2"></View>
+
+
+        <Button
+            android:id="@+id/btn_register_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="12"
+            android:text="@string/register" android:onClick="registerUserDetails"
+            android:background="@drawable/btn_background"
+            />
+
+
+        <Button
+            android:id="@+id/btn_login_back"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" android:layout_weight="10"
+            android:layout_marginTop="@dimen/margin_top"
+            android:text="@string/already_registered_login"
+            android:background="@android:color/transparent"
+            android:onClick="showLoginScreen"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AttendanceDemo</string>
+   <!-- MainLoginRegisterActivity -->
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="not_a_member_sign_up">Not a member? Sign Up .</string>
+    <string name="already_registered_login">Already registered! Login</string>
+    <string name="database_updated">Database Updated</string>
+    <string name="match_found">MatchFound</string>
+    <string name="pin_not_registered">Pin Not Registered</string>
+    <string name="pin_already_exists">Pin Already Exists</string>
+    <string name="register_successful">Registeration Successful</string>
+    <string name="enter_all_details">Enter All Details</string>
+    <string name="pin_match_error">Pin Match Error</string>
+
+    <!-- Database -->
+    <string name="name_inserted">Zarina</string>
+    <string name="address_inserted">Dubai</string>
+    <string name="pin_inserted">1008</string>
+
+    <!-- TimeDetails -->
+    <string name="time_in">Time In</string>
+    <string name="time_out">Time Out</string>
+    <string name="date">Date</string>
+    <string name="welcome">Welcome</string>
+    <string name="noentryyet">No Entry Yet</string>
+    <string name="pleasewait">...Please Wait</string>
+</resources>
