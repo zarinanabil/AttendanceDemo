@@ -131,8 +131,4 @@ public class TimeDetailsActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        this.finish();
-    }
 }

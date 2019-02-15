@@ -175,21 +175,19 @@ public class TimeDetailsRepository {
     }
 
     public LiveData<List<TimeDetails>> getAllTimeDetailsByPin(int pin) {
-        //AppDatabase db = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, DB_NAME).build();
+
         timeDetailsDao.getAllTimeDetailsByPin(pin)
                 .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()
         ).subscribe(new MaybeObserver<List<TimeDetails>>() {
             @Override
             public void onSubscribe(Disposable d) {
 
-                Log.e("onSubscribe","ingetAllTimeDetailsByPin: ");
 
             }
 
             @Override
             public void onSuccess(List<TimeDetails> timeDetailsList) {
 
-                Log.e("inAllTimeDetailsByPin","ingetAllTimeDetailsByPin: "+timeDetailsList.size());
                 listTimeDetailsByPin.setValue(timeDetailsList);
 
             }
@@ -197,14 +195,12 @@ public class TimeDetailsRepository {
             @Override
             public void onError(Throwable e) {
 
-                Log.e("onError","ingetAllTimeDetailsByPin: ");
 
             }
 
             @Override
             public void onComplete() {
 
-                Log.e("onComplete","ingetAllTimeDetailsByPin: ");
             }
         });
 

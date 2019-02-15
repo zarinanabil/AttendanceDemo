@@ -176,7 +176,7 @@ public class MainLoginRegisterActivity extends AppCompatActivity implements Data
          *
          * */
 
-        if((name==null || name.isEmpty())||(address==null||address.isEmpty()))
+        if((name==null || name.isEmpty())||(address==null||address.isEmpty())|| pin==-1)
         {
             showToast(R.string.enter_all_details);
         }
@@ -214,7 +214,7 @@ public class MainLoginRegisterActivity extends AppCompatActivity implements Data
             toggleScreen(Screen.LOGIN_SCREEN);
         }
         else
-            MainLoginRegisterActivity.this.finish();
+            super.onBackPressed();
     }
 
     @Override
